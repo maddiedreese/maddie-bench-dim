@@ -4,6 +4,24 @@ A camera-feedback painting benchmark built with **Dimensional OS**, MuJoCo and t
 
 **Current status:** an actual Astra portrait run completed in 29 minutes 11 seconds through two DimOS workers, with 48 executed strokes and a complete 29:12 camera recording. See the [run report](docs/ASTRA_RUN.md) and [retained evidence](examples/astra/). Physical transfer is **unverified**; this is a provisional simulator, not a calibrated digital twin. See [model provenance](docs/PROVENANCE.md) and [physical commissioning](docs/TRANSFER.md).
 
+## Astra result
+
+![Astra's portrait, deposited by simulated pen contact](examples/astra/paper.png)
+
+Astra completed the run in **29 minutes 11 seconds**, executing **48 strokes** through DimOS. The drawing includes the face, hands, hair silhouette and hatched clothing. Eight later batches were rejected because they exceeded the remaining motion budget; Astra then chose to finish. The curtain background and additional hair detail remained unfinished.
+
+**[Watch or download the full run video — 29:12](https://github.com/maddiedreese/maddie-bench-dim/releases/download/astra-run-2026-10-11/full-run.mp4)** · [Run report](docs/ASTRA_RUN.md) · [Recorded evidence](examples/astra/)
+
+The video covers the entire timed run, including model thinking, both camera views and the final result, at 1× playback and 2 fps. This is a simulation result; physical transfer and POSCA pressure response remain unverified.
+
+## Future testing and hardware experiments
+
+1. **Longer runs:** compare the 30-minute baseline with longer wall-clock limits, potentially one hour, to test whether more time improves composition coverage and likeness.
+2. **Measured paper and paint-pen properties:** obtain the exact paper and PC-1MR specifications, measure the mounted tool, and calibrate contact force, speed and mark formation with physical coupons.
+3. **Actual paints:** explore paint and suitable applicators as a separate task variant, including loading, depletion, drying and material-specific contact behavior.
+
+See the [future testing plan](docs/FUTURE_TESTING.md) for measurements and experimental controls. Before hardware execution, confirm the intended relationship between DimOS's planning and gravity models and the supplied Anvil arm/gripper. The [model-alignment review](docs/MODEL_ALIGNMENT.md) distinguishes the intentional model split from our provisional payload assumptions. These are future experiments; the current recorded baseline remains 30 minutes.
+
 ## Run locally
 
 With Python 3.11 and [uv](https://docs.astral.sh/uv/) installed:
@@ -85,14 +103,6 @@ uv run python scripts/record_run.py runs/RUN_ID
 The separate `record_run.py` script is a sampled 24× timelapse. It can begin late and is not the complete automatic `full-run.mp4` recording. Neither recorder reconstructs unseen frames.
 
 The viewer is read-only and binds to localhost. Runs and credentials are excluded from Git; a selected calibration example is retained in `examples/calibration/`. Physical-state ground truth is logged for evaluation, while Astra receives camera images and the controller's estimated-force feedback.
-
-## Future testing and hardware experiments
-
-1. **Longer runs:** compare the 30-minute baseline with longer wall-clock limits, potentially one hour, to test whether more time improves composition coverage and likeness.
-2. **Measured paper and paint-pen properties:** obtain the exact paper and PC-1MR specifications, measure the mounted tool, and calibrate contact force, speed and mark formation with physical coupons.
-3. **Actual paints:** explore paint and suitable applicators as a separate task variant, including loading, depletion, drying and material-specific contact behavior.
-
-See the [future testing plan](docs/FUTURE_TESTING.md) for measurements and experimental controls. Before hardware execution, confirm the intended relationship between DimOS's planning and gravity models and the supplied Anvil arm/gripper. The [source review and draft maintainer question](docs/MODEL_ALIGNMENT.md) distinguish the intentional model split from our provisional payload assumptions. These are future experiments; the current recorded baseline remains 30 minutes.
 
 ## Accuracy boundaries
 

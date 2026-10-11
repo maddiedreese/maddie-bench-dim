@@ -28,6 +28,6 @@ The current rigid fine-tip pen and heuristic ink model cannot represent a loaded
 
 ## Hardware prerequisites
 
-Resolve which DimOS models and calibration data apply to the supplied Anvil OpenYAM and retained gripper. The planning/gravity split and a draft question for the maintainers are documented in [MODEL_ALIGNMENT.md](MODEL_ALIGNMENT.md). Then follow the measured commissioning steps in [TRANSFER.md](TRANSFER.md), beginning with noncontact motion and calibration coupons before replaying a portrait.
+Resolve which DimOS models and calibration data apply to the supplied Anvil OpenYAM and retained gripper. The planning/gravity split and validation requirements are documented in [MODEL_ALIGNMENT.md](MODEL_ALIGNMENT.md). Then follow the measured commissioning steps in [TRANSFER.md](TRANSFER.md), beginning with noncontact motion and calibration coupons before replaying a portrait.
 
 Record hardware/firmware versions, model hashes, transforms, material specifications and measurement uncertainty with each hardware run. Simulation completion is evidence of the software workflow; hardware results must establish physical accuracy separately.
