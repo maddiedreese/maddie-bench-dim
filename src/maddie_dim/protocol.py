@@ -1,6 +1,7 @@
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 import math
 
+
 class Stroke(BaseModel):
     model_config = ConfigDict(extra="forbid", allow_inf_nan=False)
     points: list[tuple[float, float]] = Field(min_length=2, max_length=128)
@@ -11,9 +12,17 @@ class Stroke(BaseModel):
     @classmethod
     def inside_paper(cls, points):
         for x, y in points:
-            if not (math.isfinite(x) and math.isfinite(y) and 12 <= x <= 198 and 12 <= y <= 285):
-                raise ValueError("Coordinates must be finite millimetres inside the 12 mm A4 margin")
+            if not (
+                math.isfinite(x)
+                and math.isfinite(y)
+                and 12 <= x <= 198
+                and 12 <= y <= 285
+            ):
+                raise ValueError(
+                    "Coordinates must be finite millimetres inside the 12 mm A4 margin"
+                )
         return points
+
 
 class Batch(BaseModel):
     model_config = ConfigDict(extra="forbid")
