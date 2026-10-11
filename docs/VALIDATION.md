@@ -18,6 +18,10 @@ Full-run recording was exercised through the actual DimOS controller demo: ffpro
 
 An actual Astra run subsequently completed in 29:11 with 48 executed strokes, eight rejected batches and 2,928 independent DimOS audit events. The full video was decoded without errors and its first/last frames were checked. See [the run report](ASTRA_RUN.md); completion does not mean the portrait reproduces every reference detail.
 
+## Future testing
+
+Planned experiments cover longer wall-clock budgets (potentially one hour), measured paper/paint-pen properties and actual paints with suitable applicators. See [FUTURE_TESTING.md](FUTURE_TESTING.md). Hardware model alignment is tracked in [MODEL_ALIGNMENT.md](MODEL_ALIGNMENT.md).
+
 ## Remaining evidence
 
 - Actual deadline-expiry path in a full Astra run: the completed run finished voluntarily at 29:11, so it exercised near-deadline batch rejection but not the final 1,800-second cutoff. Unit tests cover expiry.

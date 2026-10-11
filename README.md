@@ -86,6 +86,14 @@ The separate `record_run.py` script is a sampled 24× timelapse. It can begin la
 
 The viewer is read-only and binds to localhost. Runs and credentials are excluded from Git; a selected calibration example is retained in `examples/calibration/`. Physical-state ground truth is logged for evaluation, while Astra receives camera images and the controller's estimated-force feedback.
 
+## Future testing and hardware experiments
+
+1. **Longer runs:** compare the 30-minute baseline with longer wall-clock limits, potentially one hour, to test whether more time improves composition coverage and likeness.
+2. **Measured paper and paint-pen properties:** obtain the exact paper and PC-1MR specifications, measure the mounted tool, and calibrate contact force, speed and mark formation with physical coupons.
+3. **Actual paints:** explore paint and suitable applicators as a separate task variant, including loading, depletion, drying and material-specific contact behavior.
+
+See the [future testing plan](docs/FUTURE_TESTING.md) for measurements and experimental controls. Before hardware execution, confirm the intended relationship between DimOS's planning and gravity models and the supplied Anvil arm/gripper. The [source review and draft maintainer question](docs/MODEL_ALIGNMENT.md) distinguish the intentional model split from our provisional payload assumptions. These are future experiments; the current recorded baseline remains 30 minutes.
+
 ## Accuracy boundaries
 
 The strongest current evidence is that this architecture runs on this Mac, controls a real dynamics simulation through DimOS, conserves physical coordinate conventions, and responds to force targets. It cannot prove the withheld hardware's kinematics, motor-torque calibration, nib behavior, camera optics or controller bandwidth. Those require manufacturer data and physical calibration. The upstream DimOS planning and gravity models have different provenance, so a successful simulation must not be described as proof of safe execution on an actual Anvil arm.

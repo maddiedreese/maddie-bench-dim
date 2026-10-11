@@ -14,6 +14,8 @@ The DimOS LFS archive SHA-256 is `db9a2160e414830eb1c2203b573ec7557563d3f963667c
 
 Product sources: [OpenYAM](https://shop.anvil.bot/products/openyam), [gripper](https://shop.anvil.bot/products/customizable-gripper), [camera](https://shop.anvil.bot/products/60-fps-camera-module), [POSCA PC-1MR](https://www.posca.com/en-uk/product/pc-1mr/). The 0.7 mm PC-1MR has a calibrated fine tip; published specifications do not establish a pressure-to-width law.
 
+The two upstream models are selected intentionally for different roles in the pinned DimOS source. Their alignment with each other and the supplied Anvil hardware still requires confirmation; separate source files alone do not establish a defect. See the [model-alignment review and draft maintainer question](MODEL_ALIGNMENT.md).
+
 ## Parameter status
 
 | Parameter | Implementation | Status |

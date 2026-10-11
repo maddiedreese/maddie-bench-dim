@@ -11,7 +11,7 @@ Two upstream behaviors must be addressed before swapping transports:
 
 ## Commissioning evidence required
 
-1. Confirm Anvil's exact arm version, zero poses, axis directions, joint limits, motor mapping, inertias and effort limits. Resolve the DimOS planning/gravity model mismatch with Dimensional/Anvil. Match independent FK and measured poses across the workspace.
+1. Confirm Anvil's exact arm version, zero poses, axis directions, joint limits, motor mapping, inertias and effort limits. Confirm the intended alignment of DimOS's separate planning/gravity models with Dimensional/Anvil; see the [source review and draft questions](MODEL_ALIGNMENT.md). Match independent FK and measured poses across the workspace.
 2. Measure the mounted PC-1MR tool transform and mass. Record finger variant, grip width, protrusion, slip behavior and gripper hold settings. The current 190 mm tool length is an estimate.
 3. Calibrate camera intrinsics/distortion, camera-to-base and paper-to-base transforms. Fit the plane and identify its four corners. Validate across the full 12 mm margin rectangle.
 4. Begin with noncontact motions above the sheet, then single dots and short lines. Measure normal force externally during commissioning if available; do not treat motor-torque inference as a calibrated force sensor. Fit torque offsets/friction, nib compliance and an empirical force/speed/ink response with held-out coupons.
@@ -19,3 +19,5 @@ Two upstream behaviors must be addressed before swapping transports:
 6. Validate held-out force targets and trajectories, including near/far corners and approach/lift transients. Re-run the same benchmark commands under a frozen measured profile before allowing model commands.
 
 The existing contact abort (3 N), 0.5 rad/s joint velocity, 1 rad/s² acceleration, and 10 Nm effort limits are **simulation settings, not certified hardware limits**. No live operation is attempted in this project without the arm. The grant demonstration can show real DimOS orchestration, reproducible physics, force-estimation control, camera feedback and a clear calibration plan; physical accuracy remains an explicit future measurement.
+
+The planned longer-duration, measured paper/pen and actual-paint experiments are described in [FUTURE_TESTING.md](FUTURE_TESTING.md).
