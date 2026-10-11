@@ -72,6 +72,15 @@ Each directory under `runs/` contains:
 | `dimos-events.jsonl` | Messages received by the independent DimOS subscriber |
 | `turn-*/` | Astra request, observation, response and validated commands |
 
+Optional run analysis and sampled video (requires `ffmpeg`):
+
+```sh
+uv run python scripts/analyze_run.py runs/RUN_ID
+uv run python scripts/record_run.py runs/RUN_ID
+```
+
+Start the video script while a run is active. It records the actual saved camera views every two seconds at 12 fps (24× playback), labels its start time, and records that setup/earlier strokes may be absent. It does not reconstruct or synthesize unseen frames.
+
 The viewer is read-only and binds to localhost. Runs and credentials are excluded from Git; a selected calibration example is retained in `examples/calibration/`. Physical-state ground truth is logged for evaluation, while Astra receives camera images and the controller's estimated-force feedback.
 
 ## Accuracy boundaries
