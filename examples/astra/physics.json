@@ -1,0 +1,10 @@
+{
+  "sim_seconds": 1450.686,
+  "wall_seconds": 1750.751,
+  "contact_seconds": 583.126,
+  "drawn_distance_mm": 5311.74,
+  "peak_force_N": 0.532,
+  "max_tracking_error_mm": 1.539,
+  "max_planar_error_mm": 1.5,
+  "contact_lost_seconds": 3.339
+}

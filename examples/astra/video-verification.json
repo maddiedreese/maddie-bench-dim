@@ -1,0 +1,14 @@
+{
+  "file": "full-run.mp4",
+  "retained_locally_in_run": "20261011T214132720309Z",
+  "sha256": "c26f771b4bcf147c01d3f8b862eaa10d1a205273eea41842e50386afa395022d",
+  "bytes": 41950848,
+  "width": 1280,
+  "height": 760,
+  "fps": 2,
+  "frames": 3504,
+  "duration_seconds": 1752,
+  "full_decode_errors": 0,
+  "first_frame": "Before timed benchmark begins",
+  "last_frame": "Terminal completed / finished status and final portrait"
+}

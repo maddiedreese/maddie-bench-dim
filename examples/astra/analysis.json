@@ -1,0 +1,334 @@
+{
+  "mode": "astra",
+  "status": "completed",
+  "error": null,
+  "physical_transfer": "UNVERIFIED",
+  "portrait_likeness_score": null,
+  "likeness_note": "Requires blinded human evaluation; no automatic score claimed.",
+  "turns": [
+    {
+      "turn": "turn-000",
+      "strokes": 12,
+      "points": 155,
+      "done": false,
+      "note": "Place the flowing hair silhouette, face, and both hands framing the cheeks.",
+      "execution_state": "ready",
+      "usage": {
+        "input_tokens": 1619,
+        "input_tokens_details": {
+          "cache_write_tokens": 1616,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2511,
+        "output_tokens_details": {
+          "reasoning_tokens": 1525
+        },
+        "total_tokens": 4130
+      },
+      "status": "completed"
+    },
+    {
+      "turn": "turn-001",
+      "strokes": 12,
+      "points": 132,
+      "done": false,
+      "note": "Draw the arched brows, wide eyes, nose and open mouth that establish the startled expression.",
+      "execution_state": "ready",
+      "usage": {
+        "input_tokens": 3492,
+        "input_tokens_details": {
+          "cache_write_tokens": 3489,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1895,
+        "output_tokens_details": {
+          "reasoning_tokens": 649
+        },
+        "total_tokens": 5387
+      },
+      "status": "completed"
+    },
+    {
+      "turn": "turn-002",
+      "strokes": 12,
+      "points": 138,
+      "done": false,
+      "note": "Darken pupils, lashes, eyebrows and the open mouth while retaining small eye highlights.",
+      "execution_state": "ready",
+      "usage": {
+        "input_tokens": 5109,
+        "input_tokens_details": {
+          "cache_write_tokens": 5106,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1762,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 6871
+      },
+      "status": "completed"
+    },
+    {
+      "turn": "turn-003",
+      "strokes": 12,
+      "points": 174,
+      "done": false,
+      "note": "Complete the cropped sleeves, forearms, dark shirt and diagonal wristband; shade the neck between the hands.",
+      "execution_state": "ready",
+      "usage": {
+        "input_tokens": 6783,
+        "input_tokens_details": {
+          "cache_write_tokens": 6780,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1449,
+        "output_tokens_details": {
+          "reasoning_tokens": 490
+        },
+        "total_tokens": 8232
+      },
+      "status": "completed"
+    },
+    {
+      "turn": "turn-004",
+      "strokes": 12,
+      "points": 145,
+      "done": false,
+      "note": "Build flowing hair strands around both hands and restore the full curtain backdrop.",
+      "execution_state": "rejected",
+      "usage": {
+        "input_tokens": 6981,
+        "input_tokens_details": {
+          "cache_write_tokens": 6978,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1349,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 8330
+      },
+      "status": "completed"
+    },
+    {
+      "turn": "turn-005",
+      "strokes": 5,
+      "points": 38,
+      "done": false,
+      "note": "Add flowing interior hair strands and long curtain folds behind the complete portrait.",
+      "execution_state": "rejected",
+      "usage": {
+        "input_tokens": 7141,
+        "input_tokens_details": {
+          "cache_write_tokens": 7138,
+          "cached_tokens": 0
+        },
+        "output_tokens": 998,
+        "output_tokens_details": {
+          "reasoning_tokens": 724
+        },
+        "total_tokens": 8139
+      },
+      "status": "completed"
+    },
+    {
+      "turn": "turn-006",
+      "strokes": 6,
+      "points": 52,
+      "done": false,
+      "note": "Add flowing hair strands and the tall curtain folds behind the portrait.",
+      "execution_state": "rejected",
+      "usage": {
+        "input_tokens": 5984,
+        "input_tokens_details": {
+          "cache_write_tokens": 5981,
+          "cached_tokens": 0
+        },
+        "output_tokens": 862,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 6846
+      },
+      "status": "completed"
+    },
+    {
+      "turn": "turn-007",
+      "strokes": 4,
+      "points": 18,
+      "done": false,
+      "note": "Add interior flowing hair contours and vertical curtain folds on both sides.",
+      "execution_state": "rejected",
+      "usage": {
+        "input_tokens": 4623,
+        "input_tokens_details": {
+          "cache_write_tokens": 4620,
+          "cached_tokens": 0
+        },
+        "output_tokens": 686,
+        "output_tokens_details": {
+          "reasoning_tokens": 510
+        },
+        "total_tokens": 5309
+      },
+      "status": "completed"
+    },
+    {
+      "turn": "turn-008",
+      "strokes": 4,
+      "points": 16,
+      "done": false,
+      "note": "Add inner hair contours and two vertical curtain folds to frame the portrait.",
+      "execution_state": "rejected",
+      "usage": {
+        "input_tokens": 3176,
+        "input_tokens_details": {
+          "cache_write_tokens": 3173,
+          "cached_tokens": 0
+        },
+        "output_tokens": 539,
+        "output_tokens_details": {
+          "reasoning_tokens": 370
+        },
+        "total_tokens": 3715
+      },
+      "status": "completed"
+    },
+    {
+      "turn": "turn-009",
+      "strokes": 3,
+      "points": 9,
+      "done": false,
+      "note": "Add a tall curtain fold and short interior hair contours to frame the face.",
+      "execution_state": "rejected",
+      "usage": {
+        "input_tokens": 2934,
+        "input_tokens_details": {
+          "cache_write_tokens": 2931,
+          "cached_tokens": 0
+        },
+        "output_tokens": 641,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 3575
+      },
+      "status": "completed"
+    },
+    {
+      "turn": "turn-010",
+      "strokes": 2,
+      "points": 7,
+      "done": true,
+      "note": "Finish with interior hair contours framing the crown and face.",
+      "execution_state": "rejected",
+      "usage": {
+        "input_tokens": 2440,
+        "input_tokens_details": {
+          "cache_write_tokens": 2437,
+          "cached_tokens": 0
+        },
+        "output_tokens": 526,
+        "output_tokens_details": {
+          "reasoning_tokens": 430
+        },
+        "total_tokens": 2966
+      },
+      "status": "completed"
+    },
+    {
+      "turn": "turn-011",
+      "strokes": 1,
+      "points": 3,
+      "done": true,
+      "note": "Finish with a short inner hair contour following the left crown.",
+      "execution_state": "rejected",
+      "usage": {
+        "input_tokens": 2284,
+        "input_tokens_details": {
+          "cache_write_tokens": 2281,
+          "cached_tokens": 0
+        },
+        "output_tokens": 458,
+        "output_tokens_details": {
+          "reasoning_tokens": 394
+        },
+        "total_tokens": 2742
+      },
+      "status": "completed"
+    },
+    {
+      "turn": "turn-012",
+      "strokes": 0,
+      "points": 0,
+      "done": true,
+      "note": "Finish the portrait with the existing facial details, hands, hair silhouette and hatched clothing.",
+      "usage": {
+        "input_tokens": 2086,
+        "input_tokens_details": {
+          "cache_write_tokens": 2083,
+          "cached_tokens": 0
+        },
+        "output_tokens": 274,
+        "output_tokens_details": {
+          "reasoning_tokens": 234
+        },
+        "total_tokens": 2360
+      },
+      "status": "completed"
+    }
+  ],
+  "force_groups": [
+    {
+      "target_N": 0.23,
+      "samples": 705,
+      "actual_mean_N": 0.20437439392618795,
+      "actual_p95_N": 0.2696269690479468,
+      "estimated_mean_N": 0.20366255969575697,
+      "tracking_rmse_N": 0.04883314563133446
+    },
+    {
+      "target_N": 0.24,
+      "samples": 2106,
+      "actual_mean_N": 0.23689708470493348,
+      "actual_p95_N": 0.35679333515696793,
+      "estimated_mean_N": 0.23658676646140125,
+      "tracking_rmse_N": 0.06446208987239586
+    },
+    {
+      "target_N": 0.25,
+      "samples": 13041,
+      "actual_mean_N": 0.24090816023828276,
+      "actual_p95_N": 0.30522768956167123,
+      "estimated_mean_N": 0.240106431663999,
+      "tracking_rmse_N": 0.047488842922885514
+    },
+    {
+      "target_N": 0.26,
+      "samples": 12115,
+      "actual_mean_N": 0.25975640450891707,
+      "actual_p95_N": 0.35912949921589704,
+      "estimated_mean_N": 0.2586383238210336,
+      "tracking_rmse_N": 0.05993078180590856
+    },
+    {
+      "target_N": 0.27,
+      "samples": 317,
+      "actual_mean_N": 0.22356166807935077,
+      "actual_p95_N": 0.27994622253988727,
+      "estimated_mean_N": 0.23113908037984496,
+      "tracking_rmse_N": 0.05871627664708966
+    }
+  ],
+  "physics": {
+    "sim_seconds": 1450.686,
+    "wall_seconds": 1750.751,
+    "contact_seconds": 583.126,
+    "drawn_distance_mm": 5311.74,
+    "peak_force_N": 0.532,
+    "max_tracking_error_mm": 1.539,
+    "max_planar_error_mm": 1.5,
+    "contact_lost_seconds": 3.339
+  }
+}

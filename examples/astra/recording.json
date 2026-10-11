@@ -1,0 +1,14 @@
+{
+  "file": "full-run.mp4",
+  "frames": 3504,
+  "fps": 2,
+  "playback_speed": 1,
+  "started_utc": "2026-10-11T21:41:33.479967+00:00",
+  "finished_utc": "2026-10-11T22:10:44.800218+00:00",
+  "wall_duration_s": 1751.273959125043,
+  "video_duration_s": 1752.0,
+  "status": "completed",
+  "error": null,
+  "coverage": "Recorder ready before timed benchmark begins; stops after terminal manifest. Includes model thinking. Setup excluded.",
+  "camera_sampling": "Actual saved camera views, updated every 0.5 simulation seconds during motion. Views hold while idle; no interpolated motion."
+}

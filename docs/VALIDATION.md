@@ -16,9 +16,11 @@ The first Astra pilot ended after about 24 minutes because the earlier runner in
 
 Full-run recording was exercised through the actual DimOS controller demo: ffprobe confirmed 67 frames at 2 fps (33.5 seconds) for 33.01 seconds of recording wall time. The first frame precedes the benchmark clock; the final frame shows the completed coupon and terminal status. The real-time Astra run uses the same recorder.
 
+An actual Astra run subsequently completed in 29:11 with 48 executed strokes, eight rejected batches and 2,928 independent DimOS audit events. The full video was decoded without errors and its first/last frames were checked. See [the run report](ASTRA_RUN.md); completion does not mean the portrait reproduces every reference detail.
+
 ## Remaining evidence
 
-- Actual Astra portrait run and full 30-minute timing path with API latency.
+- Actual deadline-expiry path in a full Astra run: the completed run finished voluntarily at 29:11, so it exercised near-deadline batch rejection but not the final 1,800-second cutoff. Unit tests cover expiry.
 - Measured physical arm/gripper/pen/camera parameters and hardware execution.
 - Robustness sweeps over calibration error, friction, nib compliance, sensor noise and control latency; current seed tests do not establish robustness.
 - Physical pen force/ink calibration and held-out validation, including whether useful pressure-induced variation is large enough for this nib.

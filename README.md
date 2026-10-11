@@ -2,7 +2,7 @@
 
 A camera-feedback painting benchmark built with **Dimensional OS**, MuJoCo and the Anvil **OpenYAM** hardware model distributed in DimOS. Astra chooses physical pen strokes to reproduce the full original maddie-bench portrait. The arm executes them with torque-limited dynamics and contact-force control.
 
-**Current status:** local simulation and DimOS integration tested on Apple Silicon macOS. The calibration demo and an initial Astra portrait pilot have run. That pilot exposed a recoverable batch-duration rejection being treated as fatal; protocol v0.2 corrects this and logs each batch outcome. Physical transfer is **unverified**. This is a provisional simulator, not a calibrated digital twin. See [model provenance](docs/PROVENANCE.md) and [physical commissioning](docs/TRANSFER.md).
+**Current status:** an actual Astra portrait run completed in 29 minutes 11 seconds through two DimOS workers, with 48 executed strokes and a complete 29:12 camera recording. See the [run report](docs/ASTRA_RUN.md) and [retained evidence](examples/astra/). Physical transfer is **unverified**; this is a provisional simulator, not a calibrated digital twin. See [model provenance](docs/PROVENANCE.md) and [physical commissioning](docs/TRANSFER.md).
 
 ## Run locally
 
