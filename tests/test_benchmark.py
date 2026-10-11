@@ -88,3 +88,20 @@ def test_increasing_force_changes_actual_contact_and_marks():
     assert outcomes[1][0] > outcomes[0][0] + 0.10
     assert outcomes[1][1] < outcomes[0][1] - 5
     assert all(o[2] < 3 for o in outcomes)
+
+
+def test_oversized_batch_is_recoverable_before_deadline():
+    sim = PaintSim()
+    sim.started = time.monotonic()
+    sim.deadline = 60
+    long = Batch.model_validate(
+        {"strokes": [{"points": [[12, 140], [198, 140]], "speed_mm_s": 2}]}
+    )
+    before = sim.data.qpos.copy()
+    with pytest.raises(PreflightError, match="No strokes executed"):
+        sim.execute(long)
+    np.testing.assert_equal(sim.data.qpos, before)
+    assert np.asarray(sim.canvas).min() == 255
+    short = Batch.model_validate({"strokes": [{"points": [[105, 140], [107, 140]]}]})
+    sim.execute(short)
+    assert sim.distance_mm > 1

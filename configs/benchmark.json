@@ -1,5 +1,5 @@
 {
-  "protocol": "maddie-dim-v0.1-draft",
+  "protocol": "maddie-dim-v0.2-draft",
   "model": "gpt-6-astra",
   "deadline_seconds": 1800,
   "budget_usd": 100,

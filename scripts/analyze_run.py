@@ -22,6 +22,10 @@ for d in sorted(r.glob("turn-*")):
             done=b["done"],
             note=b["note"],
         )
+    if (d / "execution.json").exists():
+        item["execution_state"] = json.loads((d / "execution.json").read_text())[
+            "state"
+        ]
     if (d / "response.json").exists():
         response = json.loads((d / "response.json").read_text())
         item["usage"] = response.get("usage")

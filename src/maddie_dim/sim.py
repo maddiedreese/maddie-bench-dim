@@ -190,10 +190,16 @@ class PaintSim:
     def execute(self, batch, realtime=False):
         trajectory = self.plan(batch)
         estimate = sum(t[2] for t in trajectory)
-        if self.started is not None and self.elapsed() + estimate > self.deadline:
-            raise DeadlineReached(
-                "Batch exceeds the remaining 30-minute wall-clock budget; send fewer strokes"
-            )
+        if self.started is not None:
+            remaining = self.deadline - self.elapsed()
+            if remaining <= 0:
+                raise DeadlineReached("30-minute wall-clock limit reached")
+            if estimate > remaining:
+                raise PreflightError(
+                    f"Batch needs approximately {estimate:.1f} seconds of motion, "
+                    f"but only {remaining:.1f} seconds remain. No strokes executed; "
+                    "submit fewer or shorter strokes."
+                )
         for q0, q1, duration, ink, target, force in trajectory:
             steps = math.ceil(duration / self.model.opt.timestep)
             begin = time.monotonic()

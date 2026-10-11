@@ -2,7 +2,7 @@
 
 A camera-feedback painting benchmark built with **Dimensional OS**, MuJoCo and the Anvil **OpenYAM** hardware model distributed in DimOS. Astra chooses physical pen strokes to reproduce the full original maddie-bench portrait. The arm executes them with torque-limited dynamics and contact-force control.
 
-**Current status:** local simulation and DimOS integration tested on Apple Silicon macOS. The calibration demo is implemented; an actual Astra portrait run requires an API key. Physical transfer is **unverified**. This is a provisional simulator, not a calibrated digital twin. See [model provenance](docs/PROVENANCE.md) and [physical commissioning](docs/TRANSFER.md).
+**Current status:** local simulation and DimOS integration tested on Apple Silicon macOS. The calibration demo and an initial Astra portrait pilot have run. That pilot exposed a recoverable batch-duration rejection being treated as fatal; protocol v0.2 corrects this and logs each batch outcome. Physical transfer is **unverified**. This is a provisional simulator, not a calibrated digital twin. See [model provenance](docs/PROVENANCE.md) and [physical commissioning](docs/TRANSFER.md).
 
 ## Run locally
 
@@ -70,16 +70,19 @@ Each directory under `runs/` contains:
 | `trajectory.jsonl` | Joint commands/state, tip location, target/estimated/actual force |
 | `physics.json` | Contact path, peak force, tracking and elapsed time |
 | `dimos-events.jsonl` | Messages received by the independent DimOS subscriber |
-| `turn-*/` | Astra request, observation, response and validated commands |
+| `turn-*/` | Astra request, observation, response, validated commands and execution outcome |
+| `full-run.mp4`, `recording.json` | Complete wall-clock camera video and recording coverage/timing |
 
-Optional run analysis and sampled video (requires `ffmpeg`):
+Astra automatically records `full-run.mp4` and requires `ffmpeg` on PATH. Recording becomes ready **before** the timed run begins and stops after its terminal result. The video contains both actual saved camera views at 2 fps with 1× wall-clock playback, including API thinking time. Camera views hold while idle; motion is not interpolated. Setup is excluded. Recording status and duration are retained in `recording.json`. Add `--record-video` to record a controller demo too.
+
+Optional run analysis and an additional accelerated review video:
 
 ```sh
 uv run python scripts/analyze_run.py runs/RUN_ID
 uv run python scripts/record_run.py runs/RUN_ID
 ```
 
-Start the video script while a run is active. It records the actual saved camera views every two seconds at 12 fps (24× playback), labels its start time, and records that setup/earlier strokes may be absent. It does not reconstruct or synthesize unseen frames.
+The separate `record_run.py` script is a sampled 24× timelapse. It can begin late and is not the complete automatic `full-run.mp4` recording. Neither recorder reconstructs unseen frames.
 
 The viewer is read-only and binds to localhost. Runs and credentials are excluded from Git; a selected calibration example is retained in `examples/calibration/`. Physical-state ground truth is logged for evaluation, while Astra receives camera images and the controller's estimated-force feedback.
 

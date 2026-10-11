@@ -13,7 +13,7 @@ from dimos.core.stream import In, Out
 from dimos.core.coordination.blueprints import autoconnect
 from .config import ROOT
 from .protocol import Batch
-from .sim import PaintSim, MotionError, PreflightError
+from .sim import PaintSim, MotionError, PreflightError, DeadlineReached
 
 
 class PaintConfig(ModuleConfig):
@@ -95,6 +95,9 @@ class PaintModule(Module):
                             self._snapshot["last_result"] = result
                     except PreflightError as exc:
                         self._publish(sim, "rejected", str(exc))
+                    except DeadlineReached as exc:
+                        sim.cancelled = True
+                        self._publish(sim, "timed_out", str(exc))
                     except MotionError as exc:
                         sim.cancelled = True
                         self._publish(sim, "error", str(exc))

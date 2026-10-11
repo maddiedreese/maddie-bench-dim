@@ -79,7 +79,7 @@ try:
             count += 1
         except (FileNotFoundError, ValueError, OSError):
             pass
-        if manifest["status"] in ["completed", "failed"]:
+        if manifest["status"] in ["completed", "failed", "time_limit"]:
             break
         time.sleep(a.interval)
 finally:

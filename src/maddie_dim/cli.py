@@ -12,6 +12,12 @@ def main():
         s = sub.add_parser(name)
         s.add_argument("--run-dir")
         s.add_argument("--realtime", action="store_true")
+        s.add_argument(
+            "--record-video",
+            action="store_true",
+            default=None,
+            help="Record both cameras for the whole run (default for Astra; requires ffmpeg)",
+        )
     s = sub.add_parser("serve")
     s.add_argument("--port", type=int, default=8765)
     sub.add_parser("doctor")
@@ -19,7 +25,7 @@ def main():
     if args.command in ("demo", "astra"):
         from .runner import run
 
-        run(args.command, args.realtime, args.run_dir)
+        run(args.command, args.realtime, args.run_dir, args.record_video)
     elif args.command == "serve":
         from .dashboard import serve
 
