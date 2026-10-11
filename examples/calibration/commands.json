@@ -1,0 +1,74 @@
+{
+  "strokes": [
+    {
+      "points": [
+        [
+          65.0,
+          110.0
+        ],
+        [
+          145.0,
+          110.0
+        ]
+      ],
+      "speed_mm_s": 18.0,
+      "force_N": 0.08
+    },
+    {
+      "points": [
+        [
+          65.0,
+          135.0
+        ],
+        [
+          145.0,
+          135.0
+        ]
+      ],
+      "speed_mm_s": 18.0,
+      "force_N": 0.25
+    },
+    {
+      "points": [
+        [
+          65.0,
+          160.0
+        ],
+        [
+          145.0,
+          160.0
+        ]
+      ],
+      "speed_mm_s": 18.0,
+      "force_N": 0.6
+    },
+    {
+      "points": [
+        [
+          85.0,
+          190.0
+        ],
+        [
+          105.0,
+          175.0
+        ],
+        [
+          125.0,
+          190.0
+        ],
+        [
+          105.0,
+          205.0
+        ],
+        [
+          85.0,
+          190.0
+        ]
+      ],
+      "speed_mm_s": 18.0,
+      "force_N": 0.25
+    }
+  ],
+  "done": true,
+  "note": "Controller calibration: three force levels and a closed contour. No model call."
+}

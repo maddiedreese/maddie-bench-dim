@@ -1,0 +1,9 @@
+I2RT Flexible 4310 gripper assets
+
+Source: i2rt/robot_models/gripper/flexible_4310
+Upstream files: flexible_4310.urdf, flexible_4310.xml, and assets/*.stl
+Copyright (c) I2RT contributors
+Licensed under the MIT License.
+
+These assets are vendored and namespaced for the OpenYAM description. The
+OpenYAM Xacro/MuJoCo integration is maintained separately by DimOS.

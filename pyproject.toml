@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maddie-bench-dim"
+version = "0.1.0"
+description = "A DimOS physical drawing benchmark for Anvil OpenYAM"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "dimos @ git+https://github.com/dimensionalOS/dimos.git@1e7b4918bc626de4fa6592fb023d4b3aee932754",
+  "mujoco==3.15.0", "Pillow>=11", "numpy>=2", "scipy>=1.15",
+  "openai>=3.29", "fastapi>=0.115", "uvicorn>=0.30", "requests>=2.32", "filelock>=3", "python-dotenv>=1"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+cad = ["cadquery-ocp", "trimesh"]
+hardware = ["can-motor-control>=0.0.8"]
+
+[project.scripts]
+maddie-dim = "maddie_dim.cli:main"
+
+[project.entry-points."dimos.blueprints"]
+paint = "maddie_dim.modules:paint_blueprint"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

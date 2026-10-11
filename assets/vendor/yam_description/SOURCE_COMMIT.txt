@@ -1,0 +1,26 @@
+Gravity-compensation model
+==========================
+
+Source repository: https://github.com/TomCC7/OpenYAM_description
+Source commit: c24ef66cdcf87b9a767ec6ecd8ac8ae971bab2f7
+
+Only the gravity-compensation URDF and its referenced mesh assets are retained
+from OpenYAM_description. The upstream package.xml declares the Apache-2.0
+license. The upstream repository does not provide a standalone LICENSE file,
+so none is fabricated in this redistribution.
+
+The obsolete OpenYAM_description visualization and planning models are
+intentionally excluded. Hardware gravity compensation continues to use
+urdf/yam_gripper_gravity.urdf.
+
+Canonical visualization/planning model
+========================================
+
+Source repository: https://github.com/i2rt-robotics/i2rt
+Source commit: 5d47b358bafb30c65e397f2ece506550a0db4594
+Source path: i2rt/robot_models/arm/yam
+
+The upstream yam.urdf and assets directory are redistributed under i2rt/. Mesh
+references are rewritten from relative paths to package://yam_description URIs
+for DimOS resolution; geometry, transforms, joints, and mesh data are
+unchanged. DimOS uses this as the sole visualization and planning model.

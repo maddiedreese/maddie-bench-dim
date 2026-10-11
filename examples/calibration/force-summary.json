@@ -1,0 +1,17 @@
+[
+  {
+    "target_N": 0.08,
+    "actual_mean_N": 0.08819873482097508,
+    "estimated_mean_N": 0.0887911537769907
+  },
+  {
+    "target_N": 0.25,
+    "actual_mean_N": 0.24385032510295476,
+    "estimated_mean_N": 0.24211670007016908
+  },
+  {
+    "target_N": 0.6,
+    "actual_mean_N": 0.5520651277348698,
+    "estimated_mean_N": 0.5492465013875945
+  }
+]

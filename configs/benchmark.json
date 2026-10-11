@@ -1,0 +1,40 @@
+{
+  "protocol": "maddie-dim-v0.1-draft",
+  "model": "gpt-6-astra",
+  "deadline_seconds": 1800,
+  "budget_usd": 100,
+  "paper_mm": [
+    210,
+    297
+  ],
+  "margin_mm": 12,
+  "paper_center_m": [
+    0.24,
+    0,
+    0.0002
+  ],
+  "pen": "POSCA PC-1MR black",
+  "nominal_line_width_mm": 0.7,
+  "stroke_speed_mm_s": 18,
+  "max_speed_mm_s": 30,
+  "max_batch_strokes": 12,
+  "max_points_per_stroke": 128,
+  "physics_dt_s": 0.0001,
+  "joint_velocity_max_rad_s": 0.5,
+  "joint_acceleration_max_rad_s2": 1.0,
+  "force_abort_N": 3,
+  "contact_indentation_mm": 0.35,
+  "pen_mass_kg": 0.012,
+  "pen_radius_m": 0.005,
+  "pen_length_m": 0.13,
+  "tip_from_wrist_m": 0.19,
+  "nib_stiffness_N_m": 1500,
+  "nib_damping_N_s_m": 1.5,
+  "paper_friction": 0.4,
+  "camera_fovy_deg": 42,
+  "camera_width": 840,
+  "camera_height": 1188,
+  "camera_noise_sigma": 1.0,
+  "seed": 42,
+  "control_dt_s": 0.002
+}

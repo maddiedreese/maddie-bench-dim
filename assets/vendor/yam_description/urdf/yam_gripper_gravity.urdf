@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="yam">
+  
+  <link name="yam_base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-7.22812e-05 2.52572e-05 0.0159932" />
+      <mass value="0.822546" />
+      <inertia ixx="0.00169415" ixy="2.43507e-07" ixz="-1.31515e-07" iyy="0.00066093" iyz="-9.11171e-07" izz="0.00155626" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="-7.22812e-05 2.52572e-05 0.0159932" />
+      <geometry>
+        <mesh filename="package://yam_description/mujoco/assets/base_link_visual.stl" />
+      </geometry>
+      <material name="yam_base_link_material">
+        <color rgba="1 0.6 0 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-7.22812e-05 2.52572e-05 0.0159932" />
+      <geometry>
+        <mesh filename="package://yam_description/mujoco/assets/base_link_collision.stl" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="yam_link_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.00192861 -0.00795735 0.0208176" />
+      <mass value="0.12415" />
+      <inertia ixx="5.98038e-05" ixy="-4.5902e-06" ixz="7.411e-06" iyy="0.000169215" iyz="1.68342e-05" izz="0.000156182" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 -1.5708" xyz="-0.00192861 -0.00795735 0.0208176" />
+      <geometry>
+        <mesh filename="package://yam_description/mujoco/assets/link_1_visual.stl" />
+      </geometry>
+      <material name="yam_link_1_material">
+        <color rgba="1 0.6 0 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 -1.5708" xyz="-0.00192861 -0.00795735 0.0208176" />
+      <geometry>
+        <mesh filename="package://yam_description/mujoco/assets/link_1_collision.stl" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="yam_link_2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.132008 2.10599e-06 0.000293073" />
+      <mass value="1.24434" />
+      <inertia ixx="0.000683304" ixy="1.99503e-09" ixz="3.68337e-09" iyy="0.0121902" iyz="3.20067e-09" izz="0.0121318" />
+    </inertial>
+    <visual>
+      <origin rpy="1.5708 0 3.14159" xyz="0.132008 2.10599e-06 0.000293073" />
+      <geometry>
+        <mesh filename="package://yam_description/mujoco/assets/link_2_visual.stl" />
+      </geometry>
+      <material name="yam_link_2_material">
+        <color rgba="1 0.6 0 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="1.5708 0 3.14159" xyz="0.132008 2.10599e-06 0.000293073" />
+      <geometry>
+        <mesh filename="package://yam_description/mujoco/assets/link_2_collision.stl" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="yam_link_3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.121816 -0.054846 -0.000111108" />
+      <mass value="0.853698" />
+      <inertia ixx="0.000835003" ixy="-0.000536647" ixz="-1.03114e-05" iyy="0.00694973" iyz="-6.38588e-06" izz="0.00696195" />
+    </inertial>
+    <visual>
+      <origin rpy="-1.5708 0 -3.14159" xyz="-0.121816 -0.054846 -0.000111108" />
+      <geometry>
+        <mesh filename="package://yam_description/mujoco/assets/link_3_visual.stl" />
+      </geometry>
+      <material name="yam_link_3_material">
+        <color rgba="1 0.6 0 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="-1.5708 0 -3.14159" xyz="-0.121816 -0.054846 -0.000111108" />
+      <geometry>
+        <mesh filename="package://yam_description/mujoco/assets/link_3_collision.stl" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="yam_link_4">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0569778 -0.0527104 0.000154878" />
+      <mass value="0.463511" />
+      <inertia ixx="0.000582374" ixy="-0.000250406" ixz="-7.15749e-06" iyy="0.000491129" iyz="-3.22486e-06" izz="0.000744878" />
+    </inertial>
+    <visual>
+      <origin rpy="-1.5708 0 -3.14159" xyz="-0.0569778 -0.0527104 0.000154878" />
+      <geometry>
+        <mesh filename="package://yam_description/mujoco/assets/link_4_visual.stl" />
+      </geometry>
+      <material name="yam_link_4_material">
+        <color rgba="1 0.6 0 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="-1.5708 0 -3.14159" xyz="-0.0569778 -0.0527104 0.000154878" />
+      <geometry>
+        <mesh filename="package://yam_description/mujoco/assets/link_4_collision.stl" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="yam_link_5">
+    <inertial>
+      <origin rpy="0 0 0" xyz="3.64861e-05 0.00025665 0.0353526" />
+      <mass value="0.350962" />
+      <inertia ixx="0.000197798" ixy="-3.20004e-07" ixz="-2.01757e-07" iyy="0.000172615" iyz="-1.10998e-05" izz="0.000152291" />
+    </inertial>
+    <visual>
+      <origin rpy="-3.14159 0 1.5708" xyz="3.64861e-05 0.00025665 0.0353526" />
+      <geometry>
+        <mesh filename="package://yam_description/mujoco/assets/link_5_visual.stl" />
+      </geometry>
+      <material name="yam_link_5_material">
+        <color rgba="1 0.6 0 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="-3.14159 0 1.5708" xyz="3.64861e-05 0.00025665 0.0353526" />
+      <geometry>
+        <mesh filename="package://yam_description/mujoco/assets/link_5_collision.stl" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="yam_link_6">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-5.10177e-05 -0.00269952 0.0481778" />
+      
+      
+      <mass value="0.95" />
+      <inertia ixx="0.000955866" ixy="1.47274e-05" ixz="-5.44088e-06" iyy="0.000761363" iyz="0.000106418" izz="0.000508596" />
+    </inertial>
+    
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.025" />
+      <geometry>
+        <cylinder length="0.05" radius="0.015" />
+      </geometry>
+      <material name="yam_wrist_adapter_material">
+        <color rgba="0.35 0.38 0.42 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.025" />
+      <geometry>
+        <cylinder length="0.05" radius="0.015" />
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <joint name="yam_joint1" type="revolute">
+    <origin rpy="0 0 1.5708" xyz="-3.55271e-18 -1.05495e-18 0.0631" />
+    <parent link="yam_base_link" />
+    <child link="yam_link_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" lower="-3.92699" upper="1.5708" velocity="3.0" />
+    
+  </joint>
+  
+  <joint name="yam_joint2" type="revolute">
+    <origin rpy="1.5708 0 1.5708" xyz="2.5e-05 -0.02 0.0409" />
+    <parent link="yam_link_1" />
+    <child link="yam_link_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" lower="0" upper="3.66519" velocity="10" />
+    
+  </joint>
+  
+  <joint name="yam_joint3" type="revolute">
+    <origin rpy="-3.14159 0 0" xyz="0.264 0 0" />
+    <parent link="yam_link_2" />
+    <child link="yam_link_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" lower="0" upper="4.01426" velocity="3.0" />
+    
+  </joint>
+  
+  <joint name="yam_joint4" type="revolute">
+    <origin rpy="0 0 0" xyz="-0.245 -0.0600003 0" />
+    <parent link="yam_link_3" />
+    <child link="yam_link_4" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" lower="-1.65806" upper="1.65806" velocity="10" />
+    
+  </joint>
+  
+  <joint name="yam_joint5" type="revolute">
+    <origin rpy="-1.5708 1.5708 0" xyz="-0.0739968 -0.0395003 2.44738e-05" />
+    <parent link="yam_link_4" />
+    <child link="yam_link_5" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" lower="-1.5708" upper="1.5708" velocity="3.0" />
+    
+  </joint>
+  
+  <joint name="yam_joint6" type="revolute">
+    <origin rpy="-1.5708 0 0" xyz="0 0.0353 0.0395" />
+    <parent link="yam_link_5" />
+    <child link="yam_link_6" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" lower="-2.35619" upper="1.8326" velocity="10" />
+    
+  </joint>
+  
+  
+  
+  <link name="yam_hand">
+    
+    <visual>
+      <geometry>
+        <mesh filename="package://yam_description/meshes/flexible_4310/base.stl" />
+      </geometry>
+      <material name="yam_flexible_base_material">
+        <color rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://yam_description/meshes/flexible_4310/base.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="yam_hand_joint" type="fixed">
+    <parent link="yam_link_6" />
+    <child link="yam_hand" />
+    <origin rpy="0 0 0" xyz="0 0 0.05" />
+  </joint>
+  <link name="yam_hand_tcp" />
+  <joint name="yam_hand_tcp_joint" type="fixed">
+    <parent link="yam_hand" />
+    <child link="yam_hand_tcp" />
+    <origin rpy="0 0 0" xyz="0 0 0.08" />
+  </joint>
+  
+  <link name="yam_right_finger">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0206066 0.0299426 -0.0504181" />
+      <mass value="0.120713" />
+      <inertia ixx="8.15537e-05" ixy="-1.49917e-05" ixz="1.35255e-05" iyy="6.63359e-05" iyz="2.21256e-05" izz="8.06405e-05" />
+    </inertial>
+    <visual>
+      <origin rpy="-1.5708 -1.5708 0" xyz="0.00406876 0.0123 -0.0209218" />
+      <geometry>
+        <mesh filename="package://yam_description/meshes/flexible_4310/linear_module.stl" />
+      </geometry>
+    </visual>
+    <visual>
+      <origin rpy="-1.5708 -1.5708 0" xyz="0.006 0.00575867 -0.0451883" />
+      <geometry>
+        <mesh filename="package://yam_description/meshes/flexible_4310/soft_tips.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="-1.5708 -1.5708 0" xyz="0.00406876 0.0123 -0.0209218" />
+      <geometry>
+        <mesh filename="package://yam_description/meshes/flexible_4310/linear_module.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-1.5708 -1.5708 0" xyz="0.006 0.00575867 -0.0451883" />
+      <geometry>
+        <mesh filename="package://yam_description/meshes/flexible_4310/soft_tips.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="yam_left_finger">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0206066 0.0299426 -0.0504181" />
+      <mass value="0.120713" />
+      <inertia ixx="8.15537e-05" ixy="-1.49917e-05" ixz="1.35255e-05" iyy="6.63359e-05" iyz="2.21256e-05" izz="8.06405e-05" />
+    </inertial>
+    <visual>
+      <origin rpy="-1.5708 -1.5708 0" xyz="0.00406876 0.0123 -0.0209218" />
+      <geometry>
+        <mesh filename="package://yam_description/meshes/flexible_4310/linear_module.stl" />
+      </geometry>
+    </visual>
+    <visual>
+      <origin rpy="-1.5708 -1.5708 0" xyz="0.006 0.00575867 -0.0451883" />
+      <geometry>
+        <mesh filename="package://yam_description/meshes/flexible_4310/soft_tips.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="-1.5708 -1.5708 0" xyz="0.00406876 0.0123 -0.0209218" />
+      <geometry>
+        <mesh filename="package://yam_description/meshes/flexible_4310/linear_module.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-1.5708 -1.5708 0" xyz="0.006 0.00575867 -0.0451883" />
+      <geometry>
+        <mesh filename="package://yam_description/meshes/flexible_4310/soft_tips.stl" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="yam_finger_joint1" type="fixed">
+    <parent link="yam_hand" />
+    <child link="yam_right_finger" />
+    <origin rpy="1.5708 0 1.5708" xyz="0.04395 -0.02615 0.0547" />
+    <axis xyz="0 0 1" />
+    </joint>
+  
+  <joint name="yam_finger_joint2" type="fixed">
+    <parent link="yam_hand" />
+    <child link="yam_left_finger" />
+    <origin rpy="1.5708 0 -1.5708" xyz="-0.04395 0.02615 0.0547" />
+    <axis xyz="0 0 1" />
+    </joint>
+</robot>
