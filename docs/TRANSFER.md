@@ -6,7 +6,7 @@ The pinned DimOS release supplies `OpenYamDamiaoAdapter` and native macOS `gs_us
 
 Two upstream behaviors must be addressed before swapping transports:
 
-1. `DamiaoWholeBodyAdapter.write_motor_commands` **adds gravity compensation** unless `DamiaoRuntimeConfig.gravity_comp=False`. Our simulation already includes bias compensation. Passing those torques directly would double-count gravity. Use one owner of gravity compensation and validate its mass model.
+1. `DamiaoWholeBodyAdapter.write_motor_commands` **adds gravity compensation** unless `DamiaoRuntimeConfig.gravity_comp=False`. Our simulation already includes bias compensation. Passing those torques directly would double-count gravity. Use one owner of gravity compensation and validate its mass model. The simulation excludes the source URDF's old flexible-finger masses when substituting the Anvil hand, so its provisional load model also differs from the adapter's full default URDF.
 2. Adapter activation calibrates the gripper. The benchmark starts with a mounted, primed pen, so activation/calibration must finish before mounting the pen and before the timed run. Confirm that later activation cannot open or recalibrate the grasp.
 
 ## Commissioning evidence required

@@ -220,8 +220,9 @@ def build_scene(c=None) -> Path:
     hand = ET.SubElement(
         bodies["yam_link_6"], "body", name="anvil_gripper", pos="0 0 0.05"
     )
-    # Manufacturer's total with-gripper mass increment is 0.7 kg. Inertials
-    # are already lumped into the upstream wrist; no duplicate mass is added.
+    # Provisional replacement-hand mass model: retain upstream wrist's 0.95 kg,
+    # but exclude the old flexible fingers (2 x 0.120713 kg). This is NOT
+    # equivalent to the complete upstream gravity model or a measured Anvil hand.
     cad = ROOT / "assets/vendor/anvil-gripper/stl"
     for name, offset in [
         ("gripper_base", 0),

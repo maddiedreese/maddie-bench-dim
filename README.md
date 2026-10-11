@@ -56,7 +56,7 @@ flowchart LR
 
 `PaintModule` owns simulation, rendering and execution on one thread. `AuditModule` independently receives its DimOS output stream. A successful run checks that this stream delivered events. The registered `dimos.blueprints` entry point is `paint`; the benchmark CLI builds its run-specific blueprint through DimOS's `ModuleCoordinator`.
 
-The native joint frames, axes, masses and inertia come from DimOS's **hardware gravity URDF**. The hand visuals use Anvil's actual gripper STEP geometry, tessellated to STL. The gripper assembly transform, pen dimensions, contact compliance, actuator friction and optics remain estimates. See the parameter table before interpreting results.
+The six arm links’ native joint frames, axes, masses and inertia come from DimOS's **hardware gravity URDF**. The old flexible-finger inertials are excluded when replacing that gripper; the resulting hand mass model is provisional. The hand visuals use Anvil's actual gripper STEP geometry, tessellated to STL. The gripper assembly transform, pen dimensions, contact compliance, actuator friction and optics remain estimates. See the parameter table before interpreting results.
 
 ## Run evidence
 

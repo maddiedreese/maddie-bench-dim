@@ -20,7 +20,7 @@ Product sources: [OpenYAM](https://shop.anvil.bot/products/openyam), [gripper](h
 | --- | --- | --- |
 | Arm frames, axes, mass/inertia, limits | Hardware gravity URDF conversion | Sourced; actual Anvil match unverified |
 | Gripper outer geometry | Wide-tip fingers + base, STEP tessellation | Manufacturer CAD; assembly pose/closed offset estimated |
-| Gripper inertia | Included in upstream wrist lumped inertia | Not measured for this exact assembled gripper |
+| Gripper inertia | Upstream wrist retains 0.95 kg; the two old flexible-finger masses (0.120713 kg each) are excluded | Replacement-hand approximation; not a measured Anvil gripper model |
 | Pen | 130 mm long, 10 mm diameter, 12 g; wrist-to-tip 190 mm | Estimates; measure physical unit and grip |
 | Nib | 1,500 N/m spring, damping 1.5 N·s/m; 1.5 mm travel | Provisional numerical/contact model |
 | Paint marks | Actual normal contact >0.015 N; width 0.5–0.85 mm, force-dependent darkness | Heuristic, not measured POSCA data |
@@ -33,6 +33,8 @@ Product sources: [OpenYAM](https://shop.anvil.bot/products/openyam), [gripper](h
 | Ink dynamics | Bounded darkness and width; marks never erase | No ink depletion, drying, pooling, paper absorption or re-priming model |
 
 The simulation freezes while waiting for model responses; the pen is parked between batches. The run's wall clock continues. Static holding drift and failures during idle API time are therefore not modeled. The initial ready pose is prepositioned and no setup trajectory is counted.
+
+The replacement hand is a material dynamics assumption. Compared with the full upstream URDF, excluding its old flexible fingers changes static gravity torques by up to about 0.87 Nm at the tested paper corners/center. Independent Pinocchio checks agree with MuJoCo after those explicitly excluded inertials are removed and the new pen/nib mass is added. This validates the selected conversion, **not** the real gripper mass distribution. The full upstream hardware adapter's default gravity model is therefore also not interchangeable with this provisional scene without calibration.
 
 Do not tune force-response constants to produce a nicer portrait and then report improved model capability. Freeze the protocol before comparing models, record any revisions, and replace heuristics with measured calibration curves when hardware access is granted.
 
