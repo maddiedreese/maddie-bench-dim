@@ -2,7 +2,7 @@
 
 Local execution on Apple Silicon macOS, Python 3.11, MuJoCo 3.15 and the pinned DimOS commit. No physical arm or API key was used for the controller demonstration.
 
-The automated suite covers persistent spend reservations, invalid/nonfinite model commands, portrait coordinate orientation and four reachable corners, preflight/deadline rejection before ink deposition, absence of marks with the pen lifted, independence of camera randomness from physics, increasing actual force/darkness under increased force targets, and independent Pinocchio-versus-MuJoCo FK at five paper locations. Eight tests pass.
+The automated suite covers persistent spend reservations, invalid/nonfinite model commands, portrait coordinate orientation and four reachable corners, preflight/deadline rejection before ink deposition, absence of marks with the pen lifted, independence of camera randomness from physics, increasing actual force/darkness under increased force targets, and independent Pinocchio-versus-MuJoCo FK at five paper locations. Ten tests pass, including two viewer checks for elapsed time during model thinking and blocking secret/path-traversal access.
 
 The included example is a four-stroke controller coupon, not a model-generated portrait. The three horizontal strokes request 0.08, 0.25 and 0.6 N; the diamond requests 0.25 N. `force-summary.json` gives actual/estimated mean force during commanded drawing. All transient forces remain in the trace; averages do not hide approach forces. The arm physically parks out of the camera's way after drawing.
 

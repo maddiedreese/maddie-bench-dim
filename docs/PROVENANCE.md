@@ -26,6 +26,7 @@ Product sources: [OpenYAM](https://shop.anvil.bot/products/openyam), [gripper](h
 | Paint marks | Actual normal contact >0.015 N; width 0.5–0.85 mm, force-dependent darkness | Heuristic, not measured POSCA data |
 | Paper | 210 × 297 mm, margins 12 mm, center (0.24,0,0.0002) m | Benchmark fixture specification |
 | Table/paper | Rigid plane; friction 0.4 | Provisional; no paper wrinkle/bending model |
+| Joint/torque feedback | Ideal simulated position/velocity; torque noise σ=0.003 Nm; acceleration from sampled velocity | No measured encoder quantization, latency or independent model mismatch |
 | Motor control | 500 Hz estimated-force admittance + torque-limited PD | Simulated; macOS/CAN timing unmeasured |
 | Physics | MuJoCo 3.15, implicitfast, 0.1 ms step | Numerical choice, not measured hardware bandwidth |
 | Camera | Fixed overhead, 42° vertical FoV, 840 × 1188 render, Gaussian noise σ=1 | Synthetic optics; not measured Anvil sensor specs |
